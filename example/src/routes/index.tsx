@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -13,5 +14,7 @@ const RootRoute: React.FC = () => (
     </Stack.Navigator>
   </NavigationContainer>
 );
-
+*/
+import HomeScreen from '../pages/Home';
+const RootRoute = HomeScreen;
 export default RootRoute;
