@@ -19,13 +19,13 @@ namespace winrt::RNSensitiveInfoCPP {
     REACT_METHOD(getItem);
     void getItem(std::string key,
                  winrt::Microsoft::ReactNative::JSValueObject JSVALUEOBJECTPARAMETER options,
-                 winrt::Microsoft::ReactNative::ReactPromise<winrt::Microsoft::ReactNative::JSValueObject> const& promise) noexcept;
+                 winrt::Microsoft::ReactNative::ReactPromise<std::string> const& promise) noexcept;
     
     REACT_METHOD(setItem);
     void setItem(std::string key,
                  std::string value,
                  winrt::Microsoft::ReactNative::JSValueObject JSVALUEOBJECTPARAMETER options,
-                 winrt::Microsoft::ReactNative::ReactPromise<winrt::Microsoft::ReactNative::JSValueObject> const& promise) noexcept;
+                 winrt::Microsoft::ReactNative::ReactPromise<std::string> const& promise) noexcept;
     
     REACT_METHOD(deleteItem);
     void deleteItem(std::string key,
