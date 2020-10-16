@@ -35,5 +35,10 @@ namespace winrt::RNSensitiveInfoCPP {
     REACT_METHOD(getAllItems);
     void getAllItems(winrt::Microsoft::ReactNative::JSValueObject JSVALUEOBJECTPARAMETER options,
                      winrt::Microsoft::ReactNative::ReactPromise<winrt::Microsoft::ReactNative::JSValueObject> const& promise) noexcept;
+
+    REACT_METHOD(isSensorAvailable)
+    void isSensorAvailable(winrt::Microsoft::ReactNative::ReactPromise<bool> const& promise) noexcept;
+    REACT_METHOD(hasEnrolledFingerprints)
+    void hasEnrolledFingerprints(winrt::Microsoft::ReactNative::ReactPromise<bool> const& promise) noexcept;
   };
 }

@@ -93,4 +93,12 @@ namespace winrt::RNSensitiveInfoCPP {
       promise.Reject("cannot access datastore");
     }
   }
+
+  void RNSensitiveInfo::isSensorAvailable(winrt::Microsoft::ReactNative::ReactPromise<bool> const& promise) noexcept {
+    promise.Resolve(false);
+  }
+
+  void RNSensitiveInfo::hasEnrolledFingerprints(winrt::Microsoft::ReactNative::ReactPromise<bool> const& promise) noexcept {
+    promise.Resolve(false);
+  }
 }
