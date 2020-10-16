@@ -82,11 +82,13 @@ namespace winrt::RNSensitiveInfoCPP {
     try {
       auto name = getSharedPreferences(options);
       auto vault = PasswordVault();
-      auto data = vault.FindAllByResource(winrt::to_hstring(name));
-      winrt::Microsoft::ReactNative::JSValueObject all_data;
-      for (auto const& key : data) {
-        all_data[winrt::to_string(key.UserName())] = winrt::to_string(key.Password());
+      auto allKeys = vault.FindAllByResource(winrt::to_hstring(name));
+      winrt::Microsoft::ReactNative::JSValueObject returnValue;
+      for (auto const& key : allKeys) {
+        auto data = vault.Retrieve(winrt::to_hstring(name), key.UserName());
+        returnValue[winrt::to_string(key.UserName())] = winrt::to_string(data.Password());
       }
+      promise.Resolve(returnValue);
     } catch (...) {
       promise.Reject("cannot access datastore");
     }
