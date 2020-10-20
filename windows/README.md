@@ -5,6 +5,8 @@ This module features a C# implementation supporting react-native-windows 0.62 an
 
 You can either use autolinking on react-native-windows 0.63 and later with the C++ implementation or manually link the module on earlier realeases or when using C# version.
 
+The C++ implementation is based on C# implementation by [Tero Paananen](https://github.com/tero-paananen).
+
 ### Automatic install with autolinking on RNW >= 0.63
 RNSensitiveInfoCPP supports autolinking. Just call: `npm i react-native-sensitive-info --save`
 
