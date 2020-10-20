@@ -7,7 +7,7 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="678b5357-28ae-427e-a1be-830680c8d521"
+    Name="RNSIExample"
     Publisher="CN=ja"
     Version="1.0.0.0" />
 
